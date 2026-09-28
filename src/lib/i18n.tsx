@@ -574,8 +574,8 @@ const conditions: Record<string, { mr: string; hi: string }> = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  // Marathi is default language for Maharashtra grassroots farmers
-  const [language, setLanguageState] = useState<Language>('mr')
+  // English is default language on opening
+  const [language, setLanguageState] = useState<Language>('en')
 
   useEffect(() => {
     const saved = localStorage.getItem('vatavaran_lang') as Language | null
@@ -583,9 +583,9 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       setLanguageState(saved)
       document.documentElement.lang = saved
     } else {
-      // Default to Marathi
-      setLanguageState('mr')
-      document.documentElement.lang = 'mr'
+      // Default to English
+      setLanguageState('en')
+      document.documentElement.lang = 'en'
     }
   }, [])
 
@@ -600,11 +600,11 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   }
 
   const toggleLanguage = () => {
-    setLanguage(language === 'mr' ? 'hi' : language === 'hi' ? 'en' : 'mr')
+    setLanguage(language === 'en' ? 'mr' : language === 'mr' ? 'hi' : 'en')
   }
 
   const t = (key: string, fallback?: string): string => {
-    const dict = translations[language] || translations.mr
+    const dict = translations[language] || translations.en
     return dict[key] ?? translations.en[key] ?? fallback ?? key
   }
 

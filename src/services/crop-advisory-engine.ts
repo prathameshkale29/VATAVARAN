@@ -170,7 +170,7 @@ export function generateCropAdvisory(
   panchayatId: string,
   cropId: CropId,
   stageId: CropStageId,
-  lang: Language = 'mr'
+  lang: Language = 'en'
 ): GeneratedCropAdvisory {
   const forecast = getPanchayatFullForecast(panchayatId)
   const rain = forecast.rainfall.value
