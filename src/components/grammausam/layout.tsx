@@ -37,9 +37,9 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
         <div className="mx-auto flex h-16 max-w-[1480px] items-center gap-4 sm:gap-6 px-4 lg:px-8">
           {/* Logo */}
           <Link to="/" className="flex shrink-0 items-center gap-2.5 font-bold text-foreground group">
-            <VatavaranIcon size={36} className="transition-transform group-hover:scale-105" />
+            <VatavaranIcon size={40} className="transition-transform group-hover:scale-105 drop-shadow-sm" />
             <span className="text-xl font-bold tracking-tight">
-              Vata<b className="text-primary font-bold">Varan</b>
+              VATA<b className="text-primary font-bold">VARAN</b>
             </span>
           </Link>
 
@@ -139,7 +139,7 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
       <footer className="border-t bg-primary py-10 text-primary-foreground">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 px-5 sm:flex-row sm:items-center">
           <div className="flex items-start gap-3">
-            <VatavaranIcon size={38} className="rounded-lg shadow-md ring-1 ring-white/20 mt-0.5" />
+            <VatavaranIcon size={44} className="drop-shadow-lg mt-0.5" />
             <div>
               <p className="font-bold text-lg leading-tight">
                 {language === 'mr' ? 'वातावरण (VataVaran)' : 'VataVaran'}
