@@ -2455,6 +2455,13 @@ export function WeatherMapCanvas() {
                 <ChevronRight className="size-4 text-slate-500" />
               </Link>
               <Link
+                to="/crop-advisory"
+                className="flex items-center justify-between rounded-lg px-3 py-2 text-xs font-semibold text-slate-200 hover:bg-slate-800 hover:text-white"
+              >
+                <span>🌾 {language === 'mr' ? 'पीक सल्लागार (Crop Advisory)' : 'Crop Advisory Wizard'}</span>
+                <ChevronRight className="size-4 text-slate-500" />
+              </Link>
+              <Link
                 to="/forecast"
                 className="flex items-center justify-between rounded-lg px-3 py-2 text-xs font-semibold text-slate-200 hover:bg-slate-800 hover:text-white"
               >
